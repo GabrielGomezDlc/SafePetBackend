@@ -17,11 +17,12 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.0" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-        <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.1" />
+        <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.7" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
         <PackageReference Include="SpecFlow.xUnit" Version="3.9.22" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
+        <PackageReference Include="System.Collections.Immutable" Version="6.0.0" />
         <PackageReference Include="xunit" Version="2.4.1" />
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
           <PrivateAssets>all</PrivateAssets>
@@ -30,11 +31,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="SafePet\Controllers" />
-      <Folder Include="SafePet\Mapping" />
-      <Folder Include="SafePet\Persistent" />
-      <Folder Include="SafePet\Resources" />
-      <Folder Include="SafePet\Services" />
       <Folder Include="Security\Domain" />
     </ItemGroup>
 

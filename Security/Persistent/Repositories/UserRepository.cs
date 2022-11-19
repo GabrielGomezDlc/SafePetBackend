@@ -1,11 +1,11 @@
 ﻿using SafePetBackend.Security.Domain.Models;
 using SafePetBackend.Security.Domain.Repositories;
-//using SafePetBackend.Shared.Persistence.Contexts;
+using SafePetBackend.Shared.Persistence.Contexts;
 using SafePetBackend.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace SafePetBackend.Security.Persistence.Repositories;
-/*
+
 public class UserRepository : BaseRepository, IUserRepository
 {
     
@@ -28,9 +28,9 @@ public class UserRepository : BaseRepository, IUserRepository
         return await _context.Users.FindAsync(id);
     }
 
-    public async Task<User> FindByDniAsync(string username)
+    public async Task<User> FindByEmailAsync(string email)
     {
-        return await _context.Users.SingleOrDefaultAsync(x => x.Dni == username);
+        return await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
     }
 
     public User FindById(int id)
@@ -38,9 +38,9 @@ public class UserRepository : BaseRepository, IUserRepository
         return _context.Users.Find(id);
     }
 
-    public bool ExistsByDni(string username)
+    public bool ExistsByEmail(string email)
     {
-        return _context.Users.Any(x => x.Dni == username);
+        return _context.Users.Any(x => x.Email == email);
     }
 
     public void Update(User user)
@@ -52,4 +52,4 @@ public class UserRepository : BaseRepository, IUserRepository
     {
         _context.Users.Remove(user);
     }
-}*/
+}

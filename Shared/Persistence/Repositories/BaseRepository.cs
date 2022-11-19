@@ -1,13 +1,13 @@
-﻿//using SafePetBackend.Shared.Persistence.Contexts;
+﻿using SafePetBackend.Shared.Persistence.Contexts;
 
 namespace SafePetBackend.Shared.Persistence.Repositories;
 
 public class BaseRepository
 {
-    //protected readonly AppDbContext _context;
+    protected readonly AppDbContext _context;
 
-    //public BaseRepository(AppDbContext context)
-   // {
-      //  _context = context;
-  //  }
+    public BaseRepository(AppDbContext context)
+    {
+        _context = context;
+    }
 }
