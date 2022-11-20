@@ -1,4 +1,4 @@
-﻿using SafePetBackend.Security.Domain.Models;
+using SafePetBackend.Security.Domain.Models;
 
 namespace SafePetBackend.Security.Authorization.Handlers.Interfaces;
 

@@ -1,4 +1,4 @@
-﻿namespace SafePetBackend.Security.Authorization.Settings;
+namespace SafePetBackend.Security.Authorization.Settings;
 
 public class AppSettings
 {

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using SafePetBackend.SafePet.Domain.Repositories;
 using SafePetBackend.SafePet.Domain.Services;
 using SafePetBackend.SafePet.Persistent.Repositories;
@@ -22,6 +23,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add CORS
 
 builder.Services.AddCors();
+// AppSettings Configuration
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 
 // Add services to the container.
@@ -49,8 +52,27 @@ builder.Services.AddSwaggerGen(options =>
             Name = "CoolSolutions SafePet Resources License",
             Url = new Uri("https://coolsolutions-safepet.com/license")
         }
+        
     });
+    
     options.EnableAnnotations();
+    options.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Description = "JWR Authorization header using Bearer scheme"
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "bearerAuth" }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 // Add Database Connection
@@ -74,8 +96,6 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 
-// AppSettings Configuration
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 // Learning Injection Configuration
 
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
@@ -133,6 +153,7 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
     context.Database.EnsureCreated();
 }
 
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -142,8 +163,8 @@ if (app.Environment.IsDevelopment())
         options.SwaggerEndpoint("v1/swagger.json", "v1");
         options.RoutePrefix = "swagger";
     });
-
-    // Configure CORS 
+}
+// Configure CORS 
 
     app.UseCors(x => x
         .AllowAnyOrigin()
@@ -163,5 +184,3 @@ if (app.Environment.IsDevelopment())
     app.MapControllers();
 
     app.Run();
-}
-

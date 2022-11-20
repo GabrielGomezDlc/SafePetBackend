@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crist\\Documents\\UPC - Ingeniería de Software\\Ciclo 5\\Desarrollo de Aplicaciones Web\\Backend\\Backend-Profesor\\SafePetBackend\\SafePetBackend.csproj": {}
+    "D:\\UNIVERSIDAD\\RIDER\\TFinal\\SafePetBackend\\SafePetBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crist\\Documents\\UPC - Ingeniería de Software\\Ciclo 5\\Desarrollo de Aplicaciones Web\\Backend\\Backend-Profesor\\SafePetBackend\\SafePetBackend.csproj": {
+    "D:\\UNIVERSIDAD\\RIDER\\TFinal\\SafePetBackend\\SafePetBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crist\\Documents\\UPC - Ingeniería de Software\\Ciclo 5\\Desarrollo de Aplicaciones Web\\Backend\\Backend-Profesor\\SafePetBackend\\SafePetBackend.csproj",
+        "projectUniqueName": "D:\\UNIVERSIDAD\\RIDER\\TFinal\\SafePetBackend\\SafePetBackend.csproj",
         "projectName": "SafePetBackend",
-        "projectPath": "C:\\Users\\crist\\Documents\\UPC - Ingeniería de Software\\Ciclo 5\\Desarrollo de Aplicaciones Web\\Backend\\Backend-Profesor\\SafePetBackend\\SafePetBackend.csproj",
-        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crist\\Documents\\UPC - Ingeniería de Software\\Ciclo 5\\Desarrollo de Aplicaciones Web\\Backend\\Backend-Profesor\\SafePetBackend\\obj\\",
+        "projectPath": "D:\\UNIVERSIDAD\\RIDER\\TFinal\\SafePetBackend\\SafePetBackend.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "D:\\UNIVERSIDAD\\RIDER\\TFinal\\SafePetBackend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

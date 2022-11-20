@@ -1,6 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using SafePetBackend.Security.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 using SafePetBackend.SafePet.Domain.Models;
-using SafePetBackend.Security.Domain.Models;
 using SafePetBackend.Shared.Extensions;
 
 
@@ -44,6 +44,7 @@ public class AppDbContext: DbContext
         builder.Entity<User>().ToTable("Users");
         builder.Entity<User>().HasKey(p => p.Id);
         builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<User>().Property(p => p.Username).IsRequired().HasMaxLength(30);
         builder.Entity<User>().Property(p => p.Name).IsRequired();
         builder.Entity<User>().Property(p => p.Birthday).IsRequired();
         builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(100);

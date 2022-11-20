@@ -3,10 +3,12 @@ using SafePetBackend.SafePet.Domain.Services;
 using SafePetBackend.SafePet.Resources;
 using SafePetBackend.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using SafePetBackend.Security.Authorization.Attributes;
 using Profile = SafePetBackend.SafePet.Domain.Models.Profile;
 
 namespace SafePetBackend.SafePet.Controllers;
-
+[Authorize]
+[ApiController]
 [Route("/api/v1/[controller]")]
 public class ProfilesController: ControllerBase
 {

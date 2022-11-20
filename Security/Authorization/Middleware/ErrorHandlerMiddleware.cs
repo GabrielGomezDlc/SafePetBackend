@@ -1,4 +1,5 @@
-﻿using System.Net;
+using System.Net;
+using System.Net.Mime;
 using System.Text.Json;
 using SafePetBackend.Security.Exceptions;
 
@@ -22,20 +23,22 @@ public class ErrorHandlerMiddleware
         catch (Exception error)
         {
             var response = context.Response;
-            response.ContentType = "application/json";
+            response.ContentType = MediaTypeNames.Application.Json;
 
             switch (error)
             {
                 case AppException e:
-                    // custom application error
+                    // Custom Application Exception
                     response.StatusCode = (int)HttpStatusCode.BadRequest;
                     break;
+                
                 case KeyNotFoundException e:
-                    // not found error
+                    // Not found error
                     response.StatusCode = (int)HttpStatusCode.NotFound;
                     break;
+                
                 default:
-                    // unhandled error
+                    // Unhandled error
                     response.StatusCode = (int)HttpStatusCode.InternalServerError;
                     break;
             }

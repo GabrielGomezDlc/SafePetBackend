@@ -1,4 +1,4 @@
-﻿using SafePetBackend.Security.Domain.Models;
+using SafePetBackend.Security.Domain.Models;
 
 namespace SafePetBackend.Security.Domain.Repositories;
 
@@ -7,10 +7,9 @@ public interface IUserRepository
     Task<IEnumerable<User>> ListAsync();
     Task AddAsync(User user);
     Task<User> FindByIdAsync(int id);
-    Task<User> FindByEmailAsync(string email);
-    public bool ExistsByEmail(string email);
+    Task<User> FindByUsernameAsync(string username);
+    bool ExistsByUsername(string username);
     User FindById(int id);
-    User FindByEmail(string email);
     void Update(User user);
     void Remove(User user);
 }
