@@ -453,3 +453,14 @@ C:\Users\crist\Documents\UPC - Ingeniería de Software\Ciclo 5\Desarrollo de Apl
 C:\Users\crist\Documents\UPC - Ingeniería de Software\Ciclo 5\Desarrollo de Aplicaciones Web\Backend\Backend-Profesor\SafePetBackend\bin\Debug\net6.0\refs\Microsoft.Extensions.Logging.dll
 C:\Users\crist\Documents\UPC - Ingeniería de Software\Ciclo 5\Desarrollo de Aplicaciones Web\Backend\Backend-Profesor\SafePetBackend\bin\Debug\net6.0\refs\Microsoft.Extensions.Options.dll
 C:\Users\crist\Documents\UPC - Ingeniería de Software\Ciclo 5\Desarrollo de Aplicaciones Web\Backend\Backend-Profesor\SafePetBackend\bin\Debug\net6.0\refs\Microsoft.Extensions.Primitives.dll
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.csproj.AssemblyReference.cache
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\MvcTestingAppManifest.json
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.GeneratedMSBuildEditorConfig.editorconfig
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.AssemblyInfoInputs.cache
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.AssemblyInfo.cs
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.csproj.CoreCompileInputs.cache
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.MvcApplicationPartsAssemblyInfo.cs
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.MvcApplicationPartsAssemblyInfo.cache
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.dll
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\refint\SafePetBackend.dll
+D:\CICLO_V_ISW\APLICACIONES WEB\BackEnd-SafePet\SafePetBackendV1\obj\Debug\net6.0\SafePetBackend.pdb
