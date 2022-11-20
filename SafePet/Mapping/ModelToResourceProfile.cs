@@ -11,7 +11,7 @@ public class ModelToResourceProfile : Profile
     public ModelToResourceProfile()
     {
         CreateMap<Appointment, AppointmentResource>();
-       
+        
     }
 }
 

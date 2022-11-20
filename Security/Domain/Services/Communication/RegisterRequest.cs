@@ -5,9 +5,6 @@ namespace SafePetBackend.Security.Domain.Services.Communication;
 public class RegisterRequest
 {   
     [Required]
-    public int Id { get; set; }
-    
-    [Required]
     public string Name { get; set; }
     
     [Required]
@@ -16,10 +13,10 @@ public class RegisterRequest
     [Required]
     public string Email { get; set; }
     
-    [Required]
+    
     public int AppointmentsQuantity { get; set; }
     
-    [Required]
+    
     public int Score { get; set; }
     
     [Required]

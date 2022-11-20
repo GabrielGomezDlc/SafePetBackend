@@ -3,6 +3,7 @@ using SafePetBackend.SafePet.Domain.Models;
 using SafePetBackend.Security.Domain.Models;
 using SafePetBackend.Shared.Extensions;
 
+
 namespace SafePetBackend.Shared.Persistence.Contexts;
 
 public class AppDbContext: DbContext
@@ -17,6 +18,8 @@ public class AppDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+    
+        
         base.OnModelCreating(builder);
         
         // Users
@@ -32,7 +35,8 @@ public class AppDbContext: DbContext
         builder.Entity<User>().Property(p => p.Score);
         builder.Entity<User>().Property(p => p.AppointmentsQuantity);
         builder.Entity<User>().Property(p => p.Role).IsRequired();
-  
+        
+ 
         
         //Appointments
         builder.Entity<Appointment>().ToTable("Appointments");

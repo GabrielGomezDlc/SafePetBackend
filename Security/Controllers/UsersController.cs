@@ -30,7 +30,8 @@ public class UsersController : ControllerBase
         await _userService.RegisterAsync(request);
         return Ok(new { message = "Registration successful" });
     }
-
+    
+    [AllowAnonymous]
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
@@ -39,6 +40,7 @@ public class UsersController : ControllerBase
         return Ok(resources);
     }
 
+    [AllowAnonymous]
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -46,7 +48,9 @@ public class UsersController : ControllerBase
         var resource = _mapper.Map<User, UserResource>(user);
         return Ok(resource);
     }
-
+    
+    
+    [AllowAnonymous]
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, UpdateRequest request)
     {

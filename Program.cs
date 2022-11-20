@@ -58,7 +58,7 @@ builder.Services.AddSwaggerGen(options =>
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseMySQL("server=localhost;user=root;password=Cristian021*;database=safepetdb")
+    options => options.UseMySQL(connectionString)
         .LogTo(Console.WriteLine, LogLevel.Information)
         .EnableSensitiveDataLogging()
         .EnableDetailedErrors());
@@ -138,4 +138,3 @@ if (app.Environment.IsDevelopment())
     app.Run();
 }
 
-public partial class Program {}
