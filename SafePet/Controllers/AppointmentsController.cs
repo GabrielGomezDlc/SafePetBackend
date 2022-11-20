@@ -8,13 +8,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace SafePetBackend.SafePet.Controllers;
 
 [Route("/api/v1/[controller]")]
-public class AppointmentController: ControllerBase
+public class AppointmentsController: ControllerBase
 {
     private readonly IAppointmentService _appointmentService;
     private readonly IMapper _mapper;
 
 
-    public AppointmentController(IAppointmentService appointmentService, IMapper mapper)
+    public AppointmentsController(IAppointmentService appointmentService, IMapper mapper)
     {
         _appointmentService = appointmentService;
         _mapper = mapper;

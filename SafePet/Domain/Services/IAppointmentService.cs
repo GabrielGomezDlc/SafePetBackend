@@ -10,5 +10,7 @@ namespace SafePetBackend.SafePet.Domain.Services
         Task<AppointmentResponse> SaveAsync(Appointment category);
         Task<AppointmentResponse> UpdateAsync(int id, Appointment category);
         Task<AppointmentResponse> DeleteAsync(int id);
+        
+        
     }
 }

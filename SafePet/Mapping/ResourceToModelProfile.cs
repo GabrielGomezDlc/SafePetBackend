@@ -9,7 +9,14 @@ public class ResourceToModelProfile : Profile
     public ResourceToModelProfile()
     {
         CreateMap<SaveAppointmentResource, Appointment>();
-        
+        CreateMap<SaveCheckupResource, Checkup>();
+        CreateMap<SaveClientResource, Client>();
+        CreateMap<SaveMostPurchasedProductResource, MostPurchasedProduct>();
+        CreateMap<SaveProductResource, Product>();
+        CreateMap<SaveProfileResource, SafePetBackend.SafePet.Domain.Models.Profile>();
+        CreateMap<SaveReviewResource, Review>();
+        CreateMap<SaveVetResource, Vet>();
+        CreateMap<SaveVeterinarianNearYouResource, VeterinarianNearYou>();
 
     }
 }

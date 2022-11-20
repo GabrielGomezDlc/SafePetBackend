@@ -38,6 +38,10 @@ public class UserRepository : BaseRepository, IUserRepository
         return _context.Users.Find(id);
     }
 
+    public User FindByEmail(string email)
+    {
+        return _context.Users.SingleOrDefault(x => x.Email == email);
+    }
     public bool ExistsByEmail(string email)
     {
         return _context.Users.Any(x => x.Email == email);

@@ -63,6 +63,14 @@ public class UserService : IUserService
         if (user == null) throw new KeyNotFoundException("User not found");
         return user;
     }
+    
+    public async Task<User> GetByEmailAsync(string email)
+    {
+        var user = await _userRepository.FindByEmailAsync(email);
+        if (user == null) throw new KeyNotFoundException("User not found");
+        return user;
+    }
+
 
     public async Task RegisterAsync(RegisterRequest request)
     {
@@ -74,7 +82,7 @@ public class UserService : IUserService
         var user = _mapper.Map<User>(request);
 
         // hash password
-        user.Password = BCryptNet.HashPassword(request.Password);
+        //user.Password = BCryptNet.HashPassword(request.Password);
 
         // save user
         try
@@ -133,6 +141,13 @@ public class UserService : IUserService
     private User GetById(int id)
     {
         var user = _userRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("User not found");
+        return user;
+    }
+
+    private User GetByEmail(string email)
+    {
+        var user = _userRepository.FindByEmail(email);
         if (user == null) throw new KeyNotFoundException("User not found");
         return user;
     }

@@ -7,6 +7,7 @@ public interface IUserService
 {
     Task<IEnumerable<User>> ListAsync();
     Task<User> GetByIdAsync(int id);
+    Task<User> GetByEmailAsync(string email);
     Task RegisterAsync(RegisterRequest model);
     Task UpdateAsync(int id, UpdateRequest model);
     Task DeleteAsync(int id);

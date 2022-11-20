@@ -49,6 +49,16 @@ public class UsersController : ControllerBase
         return Ok(resource);
     }
     
+    [AllowAnonymous]
+    [HttpGet("email/{email}")]
+    public async Task<IActionResult> GetByEmail(string email)
+    {
+        var user = await _userService.GetByEmailAsync(email);
+        var resource = _mapper.Map<User, UserResource>(user);
+        return Ok(resource);
+    }
+    
+    
     
     [AllowAnonymous]
     [HttpPut("{id}")]

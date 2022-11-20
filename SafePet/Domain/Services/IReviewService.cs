@@ -10,6 +10,7 @@ namespace SafePetBackend.SafePet.Domain.Services
         Task<ReviewResponse> SaveAsync(Review category);
         Task<ReviewResponse> UpdateAsync(int id, Review category);
         Task<ReviewResponse> DeleteAsync(int id);
+        Task<Review> GetByVeterinarianIdAsync(int id);
     }
     
 }

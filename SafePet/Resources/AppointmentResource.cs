@@ -1,7 +1,4 @@
-﻿
-
-
-namespace SafePetBackend.SafePet.Resources
+﻿namespace SafePetBackend.SafePet.Resources
 {
     public class AppointmentResource
     {

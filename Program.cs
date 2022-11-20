@@ -80,6 +80,33 @@ builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSet
 
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
+
+builder.Services.AddScoped<ICheckupRepository, CheckupRepository>();
+builder.Services.AddScoped<ICheckupService, CheckupService>();
+
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IClientService, ClientService>();
+
+builder.Services.AddScoped<IMostPurchasedProductRepository, MostPurchasedProductRepository>();
+builder.Services.AddScoped<IMostPurchasedProductService, MostPurchasedProductService>();
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
+
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+
+builder.Services.AddScoped<IVetRepository, VetRepository>();
+builder.Services.AddScoped<IVetService, VetService>();
+
+builder.Services.AddScoped<IVeterinarianNearYouRepository, VeterinarianNearYouRepository>();
+builder.Services.AddScoped<IVeterinarianNearYouService, VeterinarianNearYouService>();
+
+
+
 // Security Injection Configuration
 
 builder.Services.AddScoped<IJwtHandler, JwtHandler>();

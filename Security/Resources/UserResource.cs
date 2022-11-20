@@ -11,6 +11,7 @@ public class UserResource
     public string Phone { get; set; }
     public string PhotoUrl { get; set; }
     public string Password { get; set; }
+    public string Role { get; set; }
 
     //public IList<Dates> Dates { get; set; }
 

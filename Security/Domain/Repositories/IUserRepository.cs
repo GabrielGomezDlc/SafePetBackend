@@ -10,6 +10,7 @@ public interface IUserRepository
     Task<User> FindByEmailAsync(string email);
     public bool ExistsByEmail(string email);
     User FindById(int id);
+    User FindByEmail(string email);
     void Update(User user);
     void Remove(User user);
 }
