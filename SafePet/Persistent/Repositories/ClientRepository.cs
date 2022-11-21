@@ -28,6 +28,10 @@ namespace SafePetBackend.SafePet.Persistent.Repositories;
         {
             return await _context. Clients.FindAsync(id);
         }
+        public async Task<Client> FindByVetId(int vetId)
+        {
+            return _context.Clients.SingleOrDefault(x => x.VetId == vetId);
+        }
 
         public void Update( Client client)
         {
