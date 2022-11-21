@@ -76,4 +76,12 @@ public class ClientsController: ControllerBase
 
         return Ok(clientResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _clientService.GetByIdAsync(id);
+        var resource = _mapper.Map<Client, ClientResource>(user);
+        return Ok(resource);
+    }
 }
