@@ -81,4 +81,11 @@ public class VeterinarianNearYouService: IVeterinarianNearYouService
             return new VeterinarianNearYouResponse($"An error occurred while deleting the name: {e.Message}");
         }
     }
+    
+    public async Task<VeterinarianNearYou> GetByIdAsync(int id)
+    {
+        var user = await _veterinarianNearYouRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("VeterinarianNearYou not found");
+        return user;
+    }
 }

@@ -78,4 +78,12 @@ public class VeterinariansNearYouController: ControllerBase
 
         return Ok(veterinarianNearYouResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _veterinarianNearYouService.GetByIdAsync(id);
+        var resource = _mapper.Map<VeterinarianNearYou, VeterinarianNearYouResource>(user);
+        return Ok(resource);
+    }
 }

@@ -10,6 +10,8 @@ namespace SafePetBackend.SafePet.Domain.Services
         Task<ProfileResponse> SaveAsync(Profile category);
         Task<ProfileResponse> UpdateAsync(int id, Profile category);
         Task<ProfileResponse> DeleteAsync(int id);
+        
+        Task<Profile> GetByIdAsync(int id);
     }
     
 }

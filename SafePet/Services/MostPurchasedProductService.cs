@@ -81,4 +81,11 @@ public class MostPurchasedProductService: IMostPurchasedProductService
             return new MostPurchasedProductResponse($"An error occurred while deleting the Name: {e.Message}");
         }
     }
+    
+    public async Task<MostPurchasedProduct> GetByIdAsync(int id)
+    {
+        var user = await _mostPurchasedProductRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("MostPurchasedProduct not found");
+        return user;
+    }
 }

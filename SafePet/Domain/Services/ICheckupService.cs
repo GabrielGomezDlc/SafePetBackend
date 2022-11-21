@@ -11,6 +11,7 @@ namespace SafePetBackend.SafePet.Domain.Services
         Task<CheckupResponse> SaveAsync(Checkup category);
         Task<CheckupResponse> UpdateAsync(int id, Checkup category);
         Task<CheckupResponse> DeleteAsync(int id);
+        Task<Checkup> GetByIdAsync(int id);
     
     }
     

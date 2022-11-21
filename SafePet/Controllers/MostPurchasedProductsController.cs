@@ -78,4 +78,12 @@ public class MostPurchasedProductsController: ControllerBase
 
         return Ok(mostPurchasedProductResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _mostPurchasedProductService.GetByIdAsync(id);
+        var resource = _mapper.Map<MostPurchasedProduct, MostPurchasedProductResource>(user);
+        return Ok(resource);
+    }
 }

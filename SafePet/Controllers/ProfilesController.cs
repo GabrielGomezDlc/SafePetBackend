@@ -78,4 +78,12 @@ public class ProfilesController: ControllerBase
 
         return Ok(profileResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _profileService.GetByIdAsync(id);
+        var resource = _mapper.Map<Profile, ProfileResource>(user);
+        return Ok(resource);
+    }
 }

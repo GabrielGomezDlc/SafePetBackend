@@ -78,4 +78,12 @@ public class CheckupsController: ControllerBase
 
         return Ok(checkupResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _checkupService.GetByIdAsync(id);
+        var resource = _mapper.Map<Checkup, CheckupResource>(user);
+        return Ok(resource);
+    }
 }

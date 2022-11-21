@@ -95,4 +95,6 @@ public class ProductsController: ControllerBase
         var resource = _mapper.Map<Product,ProductResource>(user);
         return Ok(resource);
     }
+    
+    
 }

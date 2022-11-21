@@ -10,6 +10,8 @@ namespace SafePetBackend.SafePet.Domain.Services
         Task<MostPurchasedProductResponse> SaveAsync(MostPurchasedProduct category);
         Task<MostPurchasedProductResponse> UpdateAsync(int id, MostPurchasedProduct category);
         Task<MostPurchasedProductResponse> DeleteAsync(int id);
+        
+        Task<MostPurchasedProduct> GetByIdAsync(int id);
     }
     
 }

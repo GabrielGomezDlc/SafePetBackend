@@ -81,4 +81,11 @@ public class CheckupService: ICheckupService
             return new CheckupResponse($"An error occurred while deleting the date: {e.Message}");
         }
     }
+    
+    public async Task<Checkup> GetByIdAsync(int id)
+    {
+        var user = await _checkupRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("Checkup not found");
+        return user;
+    }
 }

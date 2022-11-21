@@ -81,4 +81,11 @@ public class ProfileService: IProfileService
             return new ProfileResponse($"An error occurred while deleting the date: {e.Message}");
         }
     }
+    
+    public async Task<Profile> GetByIdAsync(int id)
+    {
+        var user = await _profileRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("Profile not found");
+        return user;
+    }
 }
