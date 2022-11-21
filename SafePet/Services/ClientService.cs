@@ -81,4 +81,18 @@ public class ClientService: IClientService
             return new ClientResponse($"An error occurred while deleting the date: {e.Message}");
         }
     }
+    
+    public async Task<Client> GetByIdAsync(int id)
+    {
+        var user = await _clientRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("Client not found");
+        return user;
+    }
+    
+    public async Task<Client> GetByVetIdAsync(int vetId)
+    {
+        var user = await _clientRepository.FindByVetId(vetId);
+        if (user == null) throw new KeyNotFoundException("Client not found");
+        return user;
+    }
 }
