@@ -81,4 +81,11 @@ public class AppointmentService: IAppointmentService
             return new AppointmentResponse($"An error occurred while deleting the date: {e.Message}");
         }
     }
+    
+    public async Task<Appointment> GetByIdAsync(int id)
+    {
+        var user = await _appointmentRepository.FindById(id);
+        if (user == null) throw new KeyNotFoundException("Appointment not found");
+        return user;
+    }
 }
