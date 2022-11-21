@@ -78,4 +78,12 @@ public class AppointmentsController: ControllerBase
 
         return Ok(appointmentResource);
     }
+    
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(int id)
+    {
+        var user = await _appointmentService.GetByIdAsync(id);
+        var resource = _mapper.Map<Appointment, AppointmentResource>(user);
+        return Ok(resource);
+    }
 }
