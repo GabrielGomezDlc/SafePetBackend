@@ -78,6 +78,7 @@ public class AppDbContext: DbContext
         builder.Entity<Client>().ToTable("Clients");
         builder.Entity<Client>().HasKey(p => p.Id);
         builder.Entity<Client>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Client>().Property(p => p.VetId).IsRequired();
         builder.Entity<Client>().Property(p => p.Name).IsRequired().HasMaxLength(100);
         builder.Entity<Client>().Property(p => p.PetName).IsRequired().HasMaxLength(100);
         builder.Entity<Client>().Property(p => p.PhotoUrl);
