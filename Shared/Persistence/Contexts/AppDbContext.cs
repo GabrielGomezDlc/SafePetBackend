@@ -49,6 +49,7 @@ public class AppDbContext: DbContext
         builder.Entity<User>().Property(p => p.Birthday).IsRequired();
         builder.Entity<User>().Property(p => p.Email).IsRequired().HasMaxLength(100);
         builder.Entity<User>().Property(p => p.Phone).IsRequired();
+        builder.Entity<User>().Property(p => p.PhotoUrl);
         builder.Entity<User>().Property(p => p.Score);
         builder.Entity<User>().Property(p => p.AppointmentsQuantity);
         builder.Entity<User>().Property(p => p.Role).IsRequired();

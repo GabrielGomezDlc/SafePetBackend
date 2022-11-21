@@ -65,6 +65,14 @@ public class UserService : IUserService
         if (user == null) throw new KeyNotFoundException("User not found");
         return user;
     }
+    
+     
+    public async Task<User> GetByEmailAsync(string email)
+    {
+        var user = await _userRepository.FindByEmailAsync(email);
+        if (user == null) throw new KeyNotFoundException("User not found");
+        return user;
+    }
 
     public async Task RegisterAsync(RegisterRequest request)
     {

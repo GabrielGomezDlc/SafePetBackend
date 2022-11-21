@@ -31,6 +31,11 @@ public class UserRepository : BaseRepository, IUserRepository
     {
         return await _context.Users.SingleOrDefaultAsync(x => x.Username == username);
     }
+    
+    public async Task<User> FindByEmailAsync(string email)
+    {
+        return await _context.Users.SingleOrDefaultAsync(x => x.Email == email);
+    }
 
     public bool ExistsByUsername(string username)
     {
@@ -40,6 +45,11 @@ public class UserRepository : BaseRepository, IUserRepository
     public User FindById(int id)
     {
         return _context.Users.Find(id);
+    }
+    
+    public User FindByEmail(string email)
+    {
+        return _context.Users.SingleOrDefault(x => x.Email == email);
     }
 
     public void Update(User user)

@@ -12,4 +12,7 @@ public interface IUserRepository
     User FindById(int id);
     void Update(User user);
     void Remove(User user);
+    User FindByEmail(string email);
+   
+    Task<User> FindByEmailAsync(string email);
 }
